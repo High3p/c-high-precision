@@ -1,0 +1,4 @@
+now HP.h is Version 1.5.2
+We fixed three bugs: HPpow(HP_int) returning 1 for positive exponents, HI_TO_LL converting negative numbers wrongly, and precision=0 rounding overflow.
+
+现在 HP.h 是 1.5.2 版本。我们修复了三个 bug：快速幂对正指数错误返回 1、HI_TO_LL 负数转换错误、精度为 0 时舍入越界。
