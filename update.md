@@ -2,7 +2,7 @@
 Starting from HP 1.5.3, we will start writing update logs.
 
 ### 2026.9.24 20:30
-We find the bug:
+We find the BUG:
 ```cpp
 HP_dec(const vector<int> it,const vector<int> dc){
     this->integer=HP_int(it);
@@ -25,4 +25,13 @@ We add the HP's input method.
 We not add the
 ```cpp
 #include<climits>
+```
+
+### 2016.9.24 21:07
+Input Stream Correction
+```cpp
+std::ostream& operator<<(std::ostream& os,const HP_int& num){
+    num.out(os);
+    return os; 
+}
 ```
