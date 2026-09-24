@@ -16,4 +16,7 @@ HP_int(vector<int> a){
     v=a;
 }
 ```
-We didn't speed up and consider the const parameter
+We didn't speed up and consider the const parameter.
+
+### 2026.9.24 20:57
+We add the HP's input method.
