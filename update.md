@@ -20,3 +20,9 @@ We didn't speed up and consider the const parameter.
 
 ### 2026.9.24 20:57
 We add the HP's input method.
+
+### 2026.9.24 21:03
+We not add the
+```cpp
+#include<climits>
+```
