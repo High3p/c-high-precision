@@ -14,18 +14,18 @@ using std::reverse;
 using std::pair;
 using std::cout;
 //#define 
-struct HP_int;//声明 
+struct HP_int;// 
 HP_int hp_div2(HP_int num);
 inline long long HI_TO_LL(const HP_int& a);
-inline void HP_abs(HP_int& a);//声明 
+inline void HP_abs(HP_int& a);// 
 inline HP_int create_hp(const std::string& s);
 inline HP_int create_hp(const long long& s);
 const HP_int hp_one();
 //hp_one.v={1};
 struct HP_int{
 	bool PANNI=false;//Positive and negative number identifiers 
-	//负数:true PANNI
-	//正数:false !PANNI
+	//:true PANNI
+	//:false !PANNI
 	vector<int> v={0};
 	HP_int(std::string a){
 //		long long f=a.find("-");
@@ -192,7 +192,8 @@ struct HP_int{
 	    }
 	    if(PANNI){
 	        HP_int tmp=*this;
-	        HP_abs(tmp);
+	        HP_int res=HP_abs(tmp);
+            if(res.is_zero())return res;
 	        return b+tmp;
 	    }
 	    HP_int absA=*this;
@@ -458,7 +459,7 @@ inline long long HI_TO_LL(const HP_int& a){
     if(p==std::string::npos)return 0;
     s=s.substr(p);
     const std::string& limit=neg?MINS:MAXS;
-    if(s.size()>limit.size()||(s.size()==limit.size()&&s>limit))return 0;//溢出
+    if(s.size()>limit.size()||(s.size()==limit.size()&&s>limit))return 0;//
     unsigned long long u=0;
     for(char c:s)u=u*10+(unsigned)(c-'0');
     if(neg){
