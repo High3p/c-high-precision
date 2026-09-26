@@ -41,3 +41,7 @@ HPint.h
 HPdec.h
 HPmath.h
 HPannex.h
+
+### 2026.9.26 13:15
+find the bug:
+Sign error when subtracting a positive number from a negative number.
