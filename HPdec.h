@@ -273,7 +273,7 @@ struct HP_dec
         HP_dec ta=*this;
         size_t fa=ta.frac.size();
         size_t fb=b.frac.size();
-        size_t out_frac=fa*fb;
+        size_t out_frac=fa-fb;
         HP_int powA("1");
         for(size_t i = 0; i < fa; i++) powA = powA * HP_int("10");
         HP_int powB("1");
