@@ -445,8 +445,7 @@ HP_int hp_div2(HP_int num){
     }
 
     size_t p=0;
-    while(p<res.v.size()&&res.v[p]==0)
-        p++;
+    while(p<res.v.size()&&res.v[p]==0)p++;
     if(p==res.v.size()){
         res.v.clear();
         res.v.push_back(0);
