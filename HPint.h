@@ -191,8 +191,9 @@ struct HP_int{
 	        return *this+tmp;
 	    }
 	    if(PANNI){
-	        HP_int tmp=*this;
-	        HP_int res=HP_abs(tmp)+b;
+	        HP_int res=*this;
+	        HP_abs(res);
+            res+=b;
             if(res.is_zero()){
                 res.PANNI=0;
                 return res;
