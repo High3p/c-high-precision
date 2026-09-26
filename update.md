@@ -61,3 +61,6 @@ void out(std::ostream& ost=std::cout) const{
 }
 ```
 The condition in out() was written the wrong way around.
+
+### 2026.9.26 17:47
+Fix the -0 output bug (out() printed "-" only when is_zero, condition was reversed).
