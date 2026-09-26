@@ -45,3 +45,6 @@ HPannex.h
 ### 2026.9.26 13:15
 find the bug:
 Sign error when subtracting a positive number from a negative number.
+
+### 2026.9.26 16:44
+Fix a bug with subtracting a positive number from a negative number.
