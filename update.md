@@ -48,3 +48,16 @@ Sign error when subtracting a positive number from a negative number.
 
 ### 2026.9.26 16:44(Not approved)
 Fix a bug with subtracting a positive number from a negative number.
+
+### 2026.9.26 16:54
+Fix a bug with subtracting a positive number from a negative number.
+
+### 2026.9.26 16:56
+```cpp
+void out(std::ostream& ost=std::cout) const{
+    if(this->PANNI&&this->is_zero())ost<<"-";
+    for(int i=0;i<v.size();i++)ost<<v[i];
+    return;
+}
+```
+The condition in out() was written the wrong way around.
