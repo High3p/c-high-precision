@@ -388,7 +388,7 @@ struct HP_int{
 		return *this%(HP_int)(it);
 	}
 	void out(std::ostream& ost=std::cout) const{
-		if(this->PANNI&&this->is_zero())ost<<"-";
+		if(this->PANNI&&!this->is_zero())ost<<"-";
 		for(int i=0;i<v.size();i++)ost<<v[i];
 		return;
 	}
