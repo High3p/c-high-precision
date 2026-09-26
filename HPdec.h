@@ -270,6 +270,9 @@ struct HP_dec
     }
 
     HP_dec operator/(const HP_dec& b)const{
+        if(b==create_hp_dec("0.0")){
+            throw "HP can\'t /0";
+        }
         HP_dec ta=*this;
         size_t fa=ta.frac.size();
         size_t fb=b.frac.size();
