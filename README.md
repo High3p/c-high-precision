@@ -1,6 +1,6 @@
 # HP - 高精度运算库 (High Precision)
 
-[![Version](https://img.shields.io/badge/version-1.5.3-blue)]()
+[![Version](https://img.shields.io/badge/version-1.5.4-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()
 [![C++](https://img.shields.io/badge/C++-11%2B-orange)]()
 
