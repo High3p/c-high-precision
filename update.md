@@ -67,3 +67,8 @@ Fix the -0 output bug (out() printed "-" only when is_zero, condition was revers
 
 ### 2026.9.27 13:27
 Because the file existed and couldn't be uploaded, we deleted the old file beforehand.
+
+### 2026.9.30 22:45
+The `HP_int`use the `KARATSUBA`.
+The function 'F5' has been renamed to 'trim_zeros'.
+The accuracy K can be adjusted according to precision
