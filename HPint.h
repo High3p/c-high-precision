@@ -411,7 +411,7 @@ struct HP_int{
 	    int last_digit=v[v.size()-1];
 	    return (last_digit%2)==1;
 	}
-	bool is_npos(){
+	bool is_valid(void)const{
         if(v.size())return 0;
         for(int now:v)if(now<0||now>9)return 0;
 		return 1;
