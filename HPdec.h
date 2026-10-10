@@ -303,7 +303,7 @@ struct HP_dec
     HP_dec operator++(int){HP_dec tmp=*this;++(*this); return tmp;}
     HP_dec operator--(int){HP_dec tmp=*this;--(*this); return tmp;}
     bool is_valid(void)const{
-    	if(integer.is_valid())return 0;
+    	if(!integer.is_valid())return 0;
     	for(int r:frac){if(r<0||r>9)return 0;}
 		return 1;
 	}
