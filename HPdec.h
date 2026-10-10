@@ -37,7 +37,7 @@ struct HP_dec
 	HP_dec(const HP_int& a){
 		integer=a;
 		integer.PANNI=0;
-		integer.PANNI=a.PANNI;
+		PANNI=a.PANNI;
 	}
 	HP_dec(vector<pair<int,int> > vpii){
 		bool j=0,x=0;
