@@ -412,7 +412,9 @@ struct HP_int{
 	    return (last_digit%2)==1;
 	}
 	bool is_npos(){
-		return 0;
+        if(v.size())return 0;
+        for(int now:v)if(now<0||now>9)return 0;
+		return 1;
 	}
 };
 //Compatible
