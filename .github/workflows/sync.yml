@@ -1,15 +1,25 @@
 name: Sync from Gitee
 on:
-  schedule:
-    - cron: "0 * * * *"
-  workflow_dispatch:
+schedule:
+
+- cron: "0 * * * *"
+workflow_dispatch:
 
 jobs:
-  sync:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Clone from Gitee
-        run: |
-          git clone --mirror https://gitee.com/High_P/high-precision.git tmp
-          cd tmp
-          git push --mirror https://github.com/High3p/c-high-precision.git
+sync:
+runs-on: ubuntu-latest
+permissions:
+contents: write
+
+steps:
+
+- name: Sync from Gitee to GitHub
+env:
+GITEE_REPO: [https://gitee.com/High_P/high-precision.git](https://gitee.com/High_P/high-precision.git)
+GITHUB_REPO: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@[github.com/High3p/c-high-precision.git](https://github.com/High3p/c-high-precision.git)
+run: |
+set -eux
+rm -rf tmp
+git clone --mirror "$GITEE_REPO" tmp
+cd tmp
+git push --mirror "$GITHUB_REPO"
