@@ -4,9 +4,6 @@ on:
     - cron: "0 * * * *"
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -14,9 +11,9 @@ jobs:
       - name: Sync from Gitee to GitHub
         env:
           GITEE_REPO: https://gitee.com/High_P/high-precision.git
-          GITHUB_REPO: "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/High3p/c-high-precision.git"
+          GITHUB_REPO: "https://x-access-token:${{ secrets.HP_PAT }}@github.com/High3p/c-high-precision.git"
         run: |
-          set -eux
+          set -eu
           rm -rf tmp
           git clone --mirror "$GITEE_REPO" tmp
           cd tmp
