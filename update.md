@@ -72,3 +72,7 @@ Because the file existed and couldn't be uploaded, we deleted the old file befor
 The `HP_int`use the `KARATSUBA`.
 The function 'F5' has been renamed to 'trim_zeros'.
 The accuracy K can be adjusted according to precision
+
+### 2026.10.30 20:29
+Sorry, author, I've been a bit busy coding and forgot to post an update. Please understand.
+
