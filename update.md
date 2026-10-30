@@ -76,3 +76,11 @@ The accuracy K can be adjusted according to precision
 ### 2026.10.30 20:29
 Sorry, author, I've been a bit busy coding and forgot to post an update. Please understand.
 
+### A long time ago (I also forgot when it was)
+added `NTT multiplication`
+added `NTT division`
+added `trigonometric functions`
+added `square root after testing`
+fixed some bugs, 
+and then that was about it.
+
