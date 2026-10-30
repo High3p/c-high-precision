@@ -84,3 +84,5 @@ added `square root after testing`
 fixed some bugs, 
 and then that was about it.
 
+### 2026.10.30 20:47
+push [HP text](https://gitee.com/High_P/hp-txet) to [HP](https://gitee.com/High_P/high-precision)
