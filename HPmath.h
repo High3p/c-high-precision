@@ -318,4 +318,14 @@ HP_dec sigmoid(const HP_dec& z){
     HP_dec denom=one+ez;
     return one/denom;
 }
+HP_dec tanh(const HP_dec& z) {
+    HP_dec two=create_hp_dec("2.0");
+    HP_dec one=create_hp_dec("1.0");
+    HP_dec s=sigmoid(two*z);
+    return two * s - one;
+}
+HP_dec relu(const HP_dec& z) {
+	const HP_dec zo=create_hp_dec("0.0");
+    return z>zo?z:zo;
+}
 #endif
