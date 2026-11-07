@@ -190,6 +190,7 @@ inline HP_dec hp_pi(long long digits=0) {
 	return hp_round(dec_fixed(pi_f,N+10),N);
 }
 inline HP_dec hp_sin(const HP_dec &x) {
+	if(x.is_zero())return create_hp_dec("0.0");
 	long long N=HI_TO_LL(precision);
 	if(N<40)N=100;
 	long long work=N+10;
@@ -210,6 +211,7 @@ inline HP_dec hp_sin(const HP_dec &x) {
 	return hp_round(dec_fixed(res,work),N);
 }
 inline HP_dec hp_cos(const HP_dec &x) {
+	if(x.is_zero())return create_hp_dec("1.0");
 	long long N=HI_TO_LL(precision);
 	if(N<40)N=100;
 	long long work=N+10;
@@ -288,5 +290,32 @@ static HP_dec sqrt(const HP_dec& x){
 		return r;
 	}
 	return r;
+}
+static HP_int fixed_exp(const HP_int &x_f,long long work) {
+    HP_int sum=hp_pow10_ll(work);
+    HP_int term=x_f;
+    for(long long k=1; k<=work+10; k++) {
+        sum=sum+term;
+        term=fixed_mul(term,x_f,work);
+        term=fixed_div_small(term,k+1);
+        if(term.is_zero())break;
+    }
+    return sum;
+}
+inline HP_dec exp(const HP_dec &x) {
+    long long N=HI_TO_LL(precision);
+    if(N<40)N=100;
+    long long work=N+10;
+    precision=create_hp(work);
+    HP_int xf=fixed(x,work);
+    HP_int res=fixed_exp(xf,work);
+    return hp_round(dec_fixed(res,work),N);
+}
+HP_dec sigmoid(const HP_dec& z){
+    HP_dec one=create_hp_dec("1.0");
+    HP_dec neg_z=create_hp_dec("-1.0")*z;
+    HP_dec ez=exp(neg_z);
+    HP_dec denom=one+ez;
+    return one/denom;
 }
 #endif
