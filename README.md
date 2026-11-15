@@ -25,7 +25,7 @@ High-Precision 是一个高精度数学计算 C++ 头文件库，提供整数、
 ### 编译示例
 
 ```bash
-g++ -o example example.cpp -std=c++17
+g++ -o example example.cpp -std=c++11
 ```
 
 ## 项目结构
