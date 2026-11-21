@@ -454,6 +454,15 @@ struct HP_int{
         for(int now:v)if(now<0||now>9)return 0;
 		return 1;
 	}
+	std::string to_string(void){
+		std::string t="";
+		if(PANNI)t+='-';
+		for(int i=0;i<v.size();i++){
+			if(v[i]>=0&&v[i]<=9)t+=(char)(v[i]+'0');
+			else throw "have not is 0-9 is number";
+		}
+		return t;
+	}
 };
 //Compatible
 inline HP_int operator+(const long long& a,const HP_int& b){return HP_int(a)+b;}
