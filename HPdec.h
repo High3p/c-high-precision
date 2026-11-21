@@ -309,6 +309,20 @@ struct HP_dec
     	for(int r:frac){if(r<0||r>9)return 0;}
 		return 1;
 	}
+	std::string to_string(void){
+		std::string t="";
+		if(PANNI)t+='-';
+		integer.PANNI=0;
+		t+=integer.to_string();
+		if(!frac.empty()){
+			t+='.';
+			for(int i=0;i<frac.size();i++){
+				if(frac[i]>=0&&frac[i]<=9)t+=(char)(frac[i]+'0');
+				else throw "have not is 0-9 is number";
+			}
+		}
+		return t;
+	} 
 };
 //Compatible
 inline HP_dec operator+(const long long& a,const HP_dec& b){return HP_dec(HP_int(a))+b;}
